@@ -1,5 +1,5 @@
-const imgUrl = chrome.runtime.getURL('urvi.png');
-document.documentElement.style.setProperty('--urvi-bg', `url("${imgUrl}")`);
+const imgUrl = chrome.runtime.getURL('no.png');
+document.documentElement.style.setProperty('--no-bg', `url("${imgUrl}")`);
 function store(category, url)
 {   
     const date = new Date();
@@ -50,7 +50,7 @@ function store(category, url)
             </div>
         `;
         const blockedScreen = document.getElementById('blocked-screen'); // or wherever you create it
-const imgUrl = chrome.runtime.getURL('urvi.png');
+const imgUrl = chrome.runtime.getURL('no.png');
 blockedScreen.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("${imgUrl}")`;
         
     }
