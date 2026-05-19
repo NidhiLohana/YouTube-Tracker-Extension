@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    min-width: 400px;
+}
+
+/* ===== Calendar ===== */
+
+.calendar {
+    width: 360px;
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    border: none;
+    background: #4f46e5;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.calendar-header h2 {
+    font-size: 22px;
+    color: #333;
+}
+
+.days,
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.days div {
+    text-align: center;
+    font-weight: bold;
+    color: #666;
+}
+
+.date {
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #f1f1f1;
+}
+
+.date:hover {
+    background: #c7d2fe;
+    transform: scale(1.05);
+}
+
+.selected {
+    background: #4f46e5 !important;
+    color: white;
+    font-weight: bold;
+}
+
+.empty {
+    background: transparent;
+    cursor: default;
+}
+
+.selected-date {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+/* ===== Category List ===== */
+
+#category-wise-data {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 350px;
+    margin: auto;
+}
+
+#category-wise-data button {
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #4f46e5;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+#category-wise-data button:hover {
+    background: #3730a3;
+    transform: scale(1.03);
+}
+
+/* ===== Analysis ===== */
+
+#analysis {
+    width: 360px;
+    margin: auto;
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    font-size: 20px;
+    line-height: 1.7;
+    color: #222;
+}
+
+/* ===== Back Button ===== */
+
+.back-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back-btn:hover {
+    background: #3730a3;
+    transform: scale(1.05);
+}
+
+#activetime,
+#passivetime {
+    width: 260px;
+    padding: 14px 18px;
+    margin: 12px 0;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease;
+}
+
+#activetime:hover,
+#passivetime:hover {
+    transform: scale(1.02);
+}
+
+#activetime {
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    color: #14532d;
+    border-left: 6px solid #22c55e;
+}
+
+#passivetime {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+    color: #4c1d95;
+    border-left: 6px solid #8b5cf6;
+}
